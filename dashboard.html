@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>hipple</title>
+  <link rel="stylesheet" href="./css/reset.css" />
+  <link rel="stylesheet" href="./css/common.css" />
+  <link rel="stylesheet" href="./css/sub.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+  <script src="./script/jquery-3.6.0.js"></script>
+</head>
+
+<body>
+  <div id="hipple_wrap">
+    <div class="hipple_main">
+      <!-- header-logo -->
+      <header class="top_logo top_style2" style="background: var(--bg_gray);">
+        <div class="mobile_style">
+            <div class="mobile_box mb40">
+                <h1 class="clock"></h1>
+                <div class="mo_ui">
+                    <img src="./image/mobile_ui.svg" alt="">
+                </div>
+            </div>
+            <div class="flex">
+              <div class="logo">
+                <img src="./image/logo.svg" alt="logo">
+              </div>
+              <div class="date_box">
+                <h1 id="today"></h1>
+                <div id="current_date" class="gray">
+                  <script>
+                    const options = { weekday: 'long', month: 'long', day: 'numeric' };
+                    document.getElementById("current_date").innerHTML = new Date().toLocaleDateString('ko-KR', options);
+                  </script>
+                </div>
+                <span class="map light_pink ml5">선화동</span>
+                <span class="weather">23.5&#176;</span>
+              </div>
+            </div>
+        </div>
+    </header>
+
+      <!-- main-->
+      <section class="main" id="contents">
+        <div class="event">
+          <p>🎁매일 성심당 주변 카페 이용권 선착순 10명 증정🎁</p>
+        </div>
+
+        <div class="searchBox mb40 mt20">
+          <img src="./image/main_icon02.png">
+          <input type="text" placeholder="검색어를 입력해주세요.">
+        </div>
+
+        <!-- sec01 -->
+        <div class="swiper mySwiper sec01 mb40">
+          <h1>우리동네 추천👍 맛집지도</h1>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide sec01_box">
+              <div class="img">
+                <img src="./image/sec01_img01.png" alt="">
+              </div>
+              <div class="text_box">
+                <h3>기념일이라면 꼭 가야할 맛집 목록</h3>
+                <p>온유네닭매운탕, 젬스톤, 성심당 외 3곳</p>
+              </div>
+            </div>
+            <div class="swiper-slide sec01_box">
+              <div class="img"><img src="./image/sec01_img02.png" alt=""></div>
+              <div class="text_box">
+                <h3>첫 대전!이라면 꼭 가야할 곳</h3>
+                <p>오시우커피대전, 코페부쉬대전, 안드로, 바이닐042</p>
+              </div>
+            </div>
+            <div class="swiper-slide sec01_box">
+              <div class="img">
+                <img src="./image/sec01_img01.png" alt="">
+              </div>
+              <div class="text_box">
+                <h3>기념일이라면 꼭 가야할 맛집 목록</h3>
+                <p>온유네닭매운탕, 젬스톤, 성심당 외 3곳</p>
+              </div>
+            </div>
+            <div class="swiper-slide sec01_box">
+              <div class="img"><img src="./image/sec01_img02.png" alt=""></div>
+              <div class="text_box">
+                <h3>첫 대전!이라면 꼭 가야할 곳</h3>
+                <p>오시우커피대전, 코페부쉬대전, 안드로, 바이닐042</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- sec02 -->
+        <div class="sec02 mb40">
+          <h1>추천맵 카테고리🙌</h1>
+          <div class="category_flex">
+            <div class="category">
+              <img src="./image/sec02_img01.png" alt="">
+              <p>동네노포</p>
+            </div>
+            <div class="category">
+              <img src="./image/sec02_img02.png" alt="">
+              <p>카페, 디저트</p>
+            </div>
+            <div class="category">
+              <img src="./image/sec02_img03.png" alt="">
+              <p>칼국수</p>
+            </div>
+            <div class="category">
+              <img src="./image/sec02_img04.png" alt="">
+              <p>분식집</p>
+            </div>
+            <div class="category">
+              <img src="./image/sec02_img05.png" alt="">
+              <p>술집</p>
+            </div>
+            <div class="category">
+              <img src="./image/sec02_img06.png" alt="">
+              <p>한식</p>
+            </div>
+            <div class="category">
+              <img src="./image/sec02_img07.png" alt="">
+              <p>중식</p>
+            </div>
+            <div class="category">
+              <img src="./image/sec02_img08.png" alt="">
+              <p>일식</p>
+            </div>
+            <div class="category">
+              <img src="./image/sec02_img09.png" alt="">
+              <p>돈까스,면</p>
+            </div>
+            <div class="category">
+              <img src="./image/sec02_img10.png" alt="">
+              <p>전체보기</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- sec03 -->
+        <div class="sec03 box_wrap mb40">
+          <div class="boxarea mb40">
+            <div class="flex" style="background: #FBEFDD;">
+              <div class="img"><img src="./image/sec03_img01.png" alt=""></div>
+              <div class="txt">
+                <p>질문으로 만들기</strong></p>
+                <span>10만원 <br class="show_375">2차코스 만들어줘!</span>
+              </div>
+            </div>
+            <div class="flex" style="background: #FFCDD1;">
+              <div class="img"><img src="./image/sec03_img02.png" alt=""></div>
+              <div class="txt">
+                <p>조건으로 만들기</strong></p>
+                <span>컨셉,인원,예산을 <br class="show_375">알려주세요!</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="boxarea boxarea_style2 mb40">
+            <div class="flex" style="background: #E4F0FF;">
+              <div class="txt_box">
+                <div class="txt">
+                  <span>결과물로 만들어주세요!</span>
+                  <p>결과물로 만들기</strong></p>
+                </div>
+                <span class="go">바로가기<i class="fa-solid fa-chevron-right i_style"></i></span>
+              </div>
+              <div class="img"><img src="./image/sec03_img03.png" alt=""></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- sec04 -->
+        <div class="swiper mySwiper sec01 sec04 sec04_map mb40">
+          <div class="title_flex">
+            <h1>지금 막 생성된 👀 맛집 지도</h1>
+            <span>더보기 <i class="fa-solid fa-chevron-right i_style"></i></span>
+          </div>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide sec01_box">
+              <div class="img"><img src="./image/sec01_img01.png" alt=""></div>
+              <div class="text_box">
+                <h3>기념일이라면 꼭 가야할 맛집 목록</h3>
+                <p>온유네닭매운탕, 젬스톤, 성심당 외 3곳</p>
+              </div>
+            </div>
+            <div class="swiper-slide sec01_box lock">
+              <div class="img">
+                <img src="./image/sec01_img02.png" alt="">
+              </div>
+              <div class="text_box">
+                <h3>첫 대전!이라면 꼭 가야할 곳</h3>
+                <p>오시우커피대전, 코페부쉬대전, 안드로, 바이닐042</p>
+              </div>
+            </div>
+            <div class="swiper-slide sec01_box lock">
+              <div class="img">
+                <img src="./image/sec01_img01.png" alt="">
+              </div>
+              <div class="text_box">
+                <h3>기념일이라면 꼭 가야할 맛집 목록</h3>
+                <p>온유네닭매운탕, 젬스톤, 성심당 외 3곳</p>
+              </div>
+            </div>
+            <div class="swiper-slide sec01_box lock">
+              <img src="./image/sec01_img02.png" alt="">
+              <div class="text_box">
+                <h3>첫 대전!이라면 꼭 가야할 곳</h3>
+                <p>오시우커피대전, 코페부쉬대전, 안드로, 바이닐042</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="event sec05 mb40">
+          <p>설문조사하고 커피 음료권 받기☕</p>
+        </div>
+
+        <!-- sec06 -->
+        <div class="swiper mySwiper sec01 sec04 mb40">
+          <div class="title_flex">
+            <h1>내가 만든 지도 😘</h1>
+            <span>더보기 <i class="fa-solid fa-chevron-right i_style"></i></span>
+          </div>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide sec01_box close">
+              <div class="img">
+                <img src="./image/sec01_img01.png" alt="">
+              </div>
+              <div class="text_box">
+                <h3>기념일이라면 꼭 가야할 맛집 목록</h3>
+                <p>온유네닭매운탕, 젬스톤, 성심당 외 3곳</p>
+              </div>
+            </div>
+            <div class="swiper-slide sec01_box lock">
+              <div class="img">
+                <img src="./image/sec01_img02.png" alt="">
+              </div>
+              <div class="text_box">
+                <h3>첫 대전!이라면 꼭 가야할 곳</h3>
+                <p>오시우커피대전, 코페부쉬대전, 안드로, 바이닐042</p>
+              </div>
+            </div>
+            <div class="swiper-slide sec01_box lock">
+              <div class="img">
+                <img src="./image/sec01_img01.png" alt="">
+              </div>
+              <div class="text_box">
+                <h3>기념일이라면 꼭 가야할 맛집 목록</h3>
+                <p>온유네닭매운탕, 젬스톤, 성심당 외 3곳</p>
+              </div>
+            </div>
+            <div class="swiper-slide sec01_box close">
+              <img src="./image/sec01_img02.png" alt="">
+              <div class="text_box">
+                <h3>첫 대전!이라면 꼭 가야할 곳</h3>
+                <p>오시우커피대전, 코페부쉬대전, 안드로, 바이닐042</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 하단 여유 -->
+        <div class="pb80"></div>
+      </section>
+
+      <!-- menu -->
+      <nav id="nav_menu">
+        <ul class="menu">
+          <li class="menu_items">
+            <a href="dashboard.html" title="home" class="on">
+              <img src="./image/menu_icon01.svg" alt="" />
+              <p>홈</p>
+            </a>
+          </li>
+          <li class="menu_items">
+            <a href="sub01.html" title="make">
+              <img src="./image/menu_icon02.svg" alt="" />
+              <p>만들기</p>
+            </a>
+          </li>
+          <li class="menu_items">
+            <a href="#" title="map">
+              <img src="./image/menu_icon03.svg" alt="" />
+              <p>지도</p>
+            </a>
+          </li>
+          <li class="menu_items">
+            <a href="#" title="save" >
+              <img src="./image/menu_icon04.svg" alt="" />
+              <p>저장</p>
+            </a>
+          </li>
+          <li class="menu_items">
+            <a href="#" title="mypage">
+              <img src="./image/menu_icon05.svg" alt="" />
+              <p>마이페이지</p>
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <footer>
+    <div class="footer_inner width1200">
+      <p class="footer_copyright text_center">Copyright ⓒ2024 제이어스.All right reserved.</p>
+    </div>
+  </footer>
+</body>
+<script src="./script/common.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  // swiper
+  var swiper = new Swiper(".sec01", {
+        slidesPerView: 1.5,
+        spaceBetween: 20,
+        loop: true,
+        loopAdditionalSlides: 1,
+        autoplay: { delay: 0, disableOnInteraction: false },
+        speed: 4000,
+        breakpoints: {
+            1000: {
+                slidesPerView: 3.5,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 2.5,
+                spaceBetween: 20,
+            },
+        },
+    });
+
+    var swiper04 = new Swiper(".sec04_map", {
+        slidesPerView: 1.5,
+        spaceBetween: 20,
+        loop: true,
+        loopAdditionalSlides: 1,
+        autoplay: { delay: 0, disableOnInteraction: false },
+        speed: 4500,
+        breakpoints: {
+            1000: {
+                slidesPerView: 3.5,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 2.5,
+                spaceBetween: 20,
+            },
+        },
+    });
+</script>
+
+</html>

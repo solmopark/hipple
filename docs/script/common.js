@@ -95,30 +95,40 @@ let swiper05 = new Swiper(".brandArea", {
 });
 
 // brandwrap_more
-$(function () {
-  $(".more").click(function (e) {
-    e.stopPropagation();
-    $(".more ul").fadeToggle(); // Use fadeToggle() instead of fadeIn()
-  });
+// $(function () {
+//   $(".more").click(function (e) {
+//     e.stopPropagation();
+//     $(".more_link").fadeToggle(); // Use fadeToggle() instead of fadeIn()
+//   });
 
-  $(".more ul li").click(function (e) {
-    e.stopPropagation();
-  });
+//   $(".more_link, .linkbox").click(function (e) {
+//     e.stopPropagation();
+//   });
 
-  $(".more ul li").click(function (e) {
-    e.preventDefault();
-    e.stopPropagation();
-    $(this).find("*").addClass("read");
-  });
+//   $(".links").click(function (e) {
+//     e.preventDefault();
+//     e.stopPropagation();
+//     $(this).find("*").addClass("read");
+//   });
 
-  $(document).click(function () {
-    $(".more ul").fadeOut();
-  });
-});
-//brandwrap_more on
-$(function () {
-  $(".user_setting .userbox li .user_item").click(function () {
-    $(".user_setting .userbox li .user_item").removeClass("on");
-    $(this).addClass("on");
-  });
-});
+//   $(document).click(function () {
+//     $(".more_link").fadeOut(); 
+//   });
+// });
+// //brandwrap_more on
+// $(function () {
+//   $(".brandArea .img .more ").click(function () {
+//     $(".brandArea .img .more .more_link").removeClass("active");
+//     $(this).addClass("active");
+//   });
+// });
+
+// local heart
+// $(" .more ").click(function () {
+//   if ($(".more .more_link ").hasClass("active")) {
+//     $(" .more .more_link ").removeClass("active");
+//   }
+//   else {
+//     $(" .more .more_link").addClass("active");
+//   }
+// });

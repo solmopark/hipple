@@ -29,16 +29,22 @@ body{background: var(--opacity_main);}
 /* -- 공용 css -- */
 .width1200{width:1200px; margin:0 auto;}
 
+/* margin */
 .ml5 {margin-left:0.5rem;}
+
 .mt5 {margin-top:0.5rem;}
 .mt10 {margin-top:1rem;}
 .mt20 {margin-top:2rem;}
+
+.mb10 {margin-bottom:1rem;}
 .mb20 {margin-bottom:2rem;}
-.mb40 {margin-bottom:4rem;}
+.mb40 {margin-bottom:4rem !important;}
 .mb80 {margin-bottom:8rem;}
 
+.my20 {margin:2rem 0;}
 .my40 {margin:4rem 0;}
 
+/* padding */
 .p20 {padding:2rem;}
 .py20 {padding:2rem 0;}
 .pb40 {padding-bottom:4rem;}
@@ -51,6 +57,8 @@ body{background: var(--opacity_main);}
 .normal{font-weight:normal !important;}
 .i_style{font-size: 1.1rem !important;}
 
+.titleArea {font-size:1.8rem; font-weight: bold; color:var(--main_pink);}
+
 /* br */
 .show_375 {display: none;}
 
@@ -62,8 +70,15 @@ body{background: var(--opacity_main);}
 .white {color:var(--white) !important;}
 .black{color:var(--text-color);}
 
+/* flex */
 .flex {display:flex; justify-content: space-between;}
+.flex_style01 {align-items: center;}
 
+/* position */
+.rel {position: relative;}
+
+/* border */
+.line_none {border:0 !important; padding: inherit !important;}
 /* main */
 body > section {background:#f5f5f5; margin: 0 auto; color:var(--text-color);}
 /* -- 공용 css_End -- */
@@ -160,7 +175,7 @@ body > section {background:#f5f5f5; margin: 0 auto; color:var(--text-color);}
 
 
 /* -- hipple_main_Menu_Start -- */
-#nav_menu {position:fixed; bottom:0; width: inherit; -webkit-box-align: center; display: -webkit-box; border-radius: 3rem 3rem 0 0; background:var(--white); padding: 2rem 5rem;  margin: 0 auto 9.8rem; z-index: 100;  box-shadow: var(--shadow_top);}
+#nav_menu {position:fixed; bottom:0; width: inherit; -webkit-box-align: center; display: -webkit-box; border-radius: 3rem 3rem 0 0; background:var(--white); padding: 2rem 5rem;  margin: 0 auto 9.8rem; z-index: 100;  box-shadow: var(--shadow_top); white-space: nowrap;}
 #nav_menu .menu {display:flex; justify-content: space-between; align-items: center; text-align: center; width:100%; }
 
 #nav_menu .menu li {color:var(--bg_black); font-size: 11px; width:100%; }
@@ -176,26 +191,11 @@ body > section {background:#f5f5f5; margin: 0 auto; color:var(--text-color);}
 /* -- hipple_main_Menu_End -- */
 
 /* -- hipple_travel_Start -- */
-.layer-wrap{display: none;  position: fixed;
-  z-index: 1001; left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;}
-
-  .layer-wrap.popup-open {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  /* .layer-wrap.popup-open .pop-wrap {
-    opacity: 1;
-  }
-  .layer-wrap.popup-open {z-index: 2000;} */
-  .pop-wrap  { /*opacity: 0; */position: relative; width:393px; margin:0 auto; background: rgba(0, 0, 0, 0.3);}
+.layer-wrap{display: none;  position: fixed; z-index: 1001; left: 0; top: 0; width: 100%; height: 100%;}
+.layer-wrap.popup-open { display: -webkit-box; display: -ms-flexbox; display: flex;  }
+.pop-wrap  { /*opacity: 0; */position: relative; width:393px; margin:0 auto; background: rgba(0, 0, 0, 0.3);}
 .travel_box{width: 393px; position:fixed;  bottom: 9.8rem; padding: 3rem; background: var(--white); box-shadow: var(--shadow_top); z-index: 102; border-radius: 20px 20px 0 0;}
-
 .travelWrap h1 {text-align: center; font-size: 1.8rem; font-weight: 700; margin-bottom: 2rem;}
-
 
 /* check */
 .travelWrap .checkbox{width:100%;}
@@ -208,19 +208,23 @@ body > section {background:#f5f5f5; margin: 0 auto; color:var(--text-color);}
 .travelWrap .checkbox-tile:before {content: ""; position: absolute; display: block; width: 2rem; height: 2rem; border: 2px solid #f5f5f5; background-color: #EFEFEF; border-radius: 50%; top: -5px; right: 0; transition: 0.25s ease; background: url('../image/check_white.png') no-repeat; background-size: 10px; background-position: 50% 50%;
 }
 .travelWrap .checkbox-label {font-size: 1.6rem; font-weight: 400; text-align: center;}
-.popup-2 {
-  opacity:0;
-  visibility:hidden;
-  transition: opacity 0.3s, visibility 0.3s;
-}
-
+.popup-2 {  opacity:0;  visibility:hidden;  transition: opacity 0.3s, visibility 0.3s;}
 .popup-2.active { opacity:1; visibility:visible; background: rgba(0, 0, 0, 0.3); height: 100%; position: absolute; z-index: 101;}
+
 /* line */
 .travelWrap .line {position:relative; width:100%; padding: 0.8rem 0;}
 .travelWrap .line:after {position:absolute; content: ''; left: 36%; width:25%; height: 3px; border-radius: 50px; background:var(--bg_black); }
 /* -- hipple_travel_End -- */
 
-/* footer */
+/* -- hipple_deco_Start -- */
+.map_box {position:relative;}
+.map_box::after {position: absolute; background: url(../image/sub01-6_icon02.svg) no-repeat; content: ''; width: 1.2rem; height: 1.5rem; bottom: 2.5%; left: 2%;}
+.map_box::before {position: absolute; content: '내 위치로부터 150m';  padding: 1rem 1rem 1rem 2.3rem;  font-size: 1.2rem;  font-weight: bold;  background-color: rgba(0, 0, 0, 0.5); color: var(--white); bottom: 0; left: 0; border-radius: 0 0.8rem 0 1rem;}
+
+/* -- hipple_deco_End -- */
+
+
+/* -- footer --*/
 footer {
   position:relative;
   width: 100%;
@@ -282,6 +286,12 @@ footer {
   
 }
 
+/* @media only screen and (max-width: 600px){
+  #nav_menu {
+    margin: 0 auto 7.2rem;
+}
+} */
+
 @media only screen and (max-width: 392px){
   /* 공용 */
   .mb40 {margin-bottom:3rem;}
@@ -310,7 +320,7 @@ footer {
   .mobile_style .mobile_box {width: auto;}
 
   /* hipple_main */
-  .hipple_main >* {width: inherit;}
+  .hipple_main >* {width: -webkit-fill-available;}
   
   /* event* */
   #hipple_wrap .main .event {font-size:1.2rem; padding: 1.2rem 0;}

@@ -21,12 +21,12 @@ function initTabSwipers() {
         });
 
         // 탭 항목이 클릭 되면 실행할 함수를 연결합니다.
-        $container.on("click", ".swiper-slide.keyword_t botton", function (e) {
+        $container.on("click", "swiper-slide.keyword_t botton, .swiper-slide span", function (e) {
             e.preventDefault();
             const $item = $(this).parent();
 
             // 클릭 된 항목을 활성 상태로 표시하고 나머지 항목 비활성화
-            $container.find(".swiper-slide.keyword_t").removeClass("active");
+            $container.find(".swiper-slide").removeClass("active");
             $item.addClass("active");
 
             // 클릭한 항목을 가운데 정렬하는 함수 호출
@@ -34,20 +34,20 @@ function initTabSwipers() {
         });
 
         // 페이지 로드 후에 active 클래스가 있는 항목을 가운데 정렬
-        const $activeItem = $container.find(".swiper-slide.keyword_t.active");
+        const $activeItem = $container.find(".swiper-slide.active");
         if ($activeItem.length > 0) {
             centerTabItem($activeItem);
         }
 
         function centerTabItem($target) {
-            const $wrapper = $container.find(".swiper-wrapper.keyword");
+            const $wrapper = $container.find(".swiper-wrapper.keyword, .swiper-wrapper.foodtab");
             const targetPos = $target.position();
             const containerWidth = $container.width();
             let newPosition = 0;
             let listWidth = 0;
 
             // 모든 슬라이드의 너비를 합산하여 리스트 전체 너비 계산
-            $wrapper.find(".swiper-slide.keyword_t").each(function () {
+            $wrapper.find(".swiper-slide").each(function () {
                 listWidth += $(this).outerWidth();
             });
 

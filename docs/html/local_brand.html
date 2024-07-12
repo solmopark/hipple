@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hipple 로컬브랜드 정보</title>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/sub.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+    <script src="../script/jquery-3.6.0.js"></script>
+    
+</head>
+
+<body>
+    <div id="hipple_wrap">
+        <div class="hipple_main" style="background: var(--white);">            
+            
+            <!-- travel -->
+            <div class="travelWrap popup-2" id="popup"> 
+                <article class="pop-wrap">
+                    <div class="travel_box" >
+                        <h1>총 구매비용</h1>
+                        <div class="checkbox ">
+                            <label class="checkbox-wrapper">
+                                <input type="checkbox" class="checkbox-input">
+                                <p class="checkbox-tile">
+                                    <span class="checkbox-label">총 구매비용</span>
+                                </p>
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label class="checkbox-wrapper">
+                                <input type="checkbox" class="checkbox-input">
+                                <p class="checkbox-tile">
+                                    <span class="checkbox-label">100,000원 이상</span>
+                                </p>
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label class="checkbox-wrapper">
+                                <input type="checkbox" class="checkbox-input">
+                                <p class="checkbox-tile">
+                                    <span class="checkbox-label">50,000원 ~ 100,000원</span>
+                                </p>
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label class="checkbox-wrapper">
+                                <input type="checkbox" class="checkbox-input">
+                                <p class="checkbox-tile">
+                                    <span class="checkbox-label">30,000원 ~ 50,000원</span>
+                                </p>
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label class="checkbox-wrapper">
+                                <input type="checkbox" class="checkbox-input">
+                                <p class="checkbox-tile">
+                                    <span class="checkbox-label">10,000원 ~ 30,000원</span>
+                                </p>
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label class="checkbox-wrapper">
+                                <input type="checkbox" class="checkbox-input">
+                                <p class="checkbox-tile">
+                                    <span class="checkbox-label">10,000원 이하</span>
+                                </p>
+                            </label>
+                        </div>
+                        <div class="line"></div>
+                    </div>
+                </article>
+            </div>
+            
+            <!-- header-logo -->
+            <header class="top_logo local_top">
+                <div class="mobile_style">
+                    <div class="mobile_box">
+                        <h1 class="clock"></h1>
+                        <div class="mo_ui">
+                            <img src="../image/mobile_ui.svg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="local_title flex mt20">
+                        <a href="dashboard.html">
+                            <img src="../image/left_arrow.png" alt="">
+                            <h1 class="bold">현지 유명 정보 🙌</h1>
+                        </a>
+                        <div class="box">
+                            <form name="search">
+                                <input type="text" class="input" name="txt" onmouseout="this.value = ''; this.blur();">
+                            </form>
+                            <i class="fas fa-search"></i>
+
+                        </div>
+                    </div>
+
+
+                    <div class="menu_wrap localwrap mt20 ">
+                        <div class="in_Layer local_swiper">
+                            <ul class="menu swiper-wrapper keyword pop_1">
+                                <li class="swiper-slide keyword_t"><button>최신순</button></li>
+                                <li class="swiper-slide keyword_t"><button>인도</button></li>
+                                <li class="swiper-slide keyword_t on"><button>영업중</button></li>
+                                <li class="swiper-slide keyword_t on active"><button >성심당혜택🥖</button></li>
+                                <li class="swiper-slide keyword_t"><button >최소금액주문</button></li>
+                                <li class="swiper-slide keyword_t"><button >총여행비용</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- main-->
+            <section class="main local" id="contents" style="background: var(--white);">
+
+                <!-- sub01 -->
+                <div class="re_box mb40">
+                    <p>땡겨서 <span class="pink bold">새로고침</span></p>
+                </div>
+
+                <!-- sub02 -->
+                <div class="sec03 box_wrap mb20">
+                    <div class="boxarea boxarea_style2">
+                        <div class="flex" style="background: #E4F0FF;">
+                            <div class="txt">
+                                <p class="normal">원도심에 힙플 <br class="show_375">사용자만을 위한 것!</p>
+                                <p>인스타그램 꿀템🍯 제공 안내</p>
+                            </div>
+                            <div class="img"><img src="../image/local-sub02_img01.png" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- sub03 -->
+                <div class="swiper brandArea mb40">
+                    <!-- <h1>로컬 브랜드 정보✨</h1> -->
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide brand_box">
+                            <div class="img">
+                                <div class="more">
+                                    <ul>
+                                        <li>주소복사</li>
+                                        <li class="mt5">네이버주소</li>
+                                    </ul>
+                                </div>
+                                <img src="../image/local-brand_img01.png" alt="">
+                            </div>
+                            <div class="text03">
+                                <h3>플라잉팬</h3>
+                                <h2>30,000원</h2>
+                            </div>
+                            <div class="flex">
+                                <div class="text02">
+                                    <h3>광천식당</h3>
+                                    <div>선화동 23-12 1층</div>
+                                </div>
+                                <div class="like">21</i></div>
+                            </div>
+                            <div class="keyword">
+                                <div>힙플 BEST</div>
+                                <div style="border-color: var(--orange); color: var(--orange);">성심당혜택</div>
+                                <div
+                                    style="border-color: inherit; color: var(--white); background:var(--text-color);">
+                                    영업중</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- sub04 -->
+                <div class="swiper sub_sec06 brandArea mb40">
+                    <div class="title_flex">
+                        <h1>만약의 경우라면 해야할 일 목록</h1>
+                        <div class="like">21</i></div>
+                    </div>
+
+                    <div class="box_style box_style3 mb20">
+                        <h2>온유네닭매운탕, 젬스톤, 성심당 외 3곳</h2>
+                        <div class="flex mt10">
+                            <span>총 여행비용 <span class="pink">111,840원</span></span>
+                            <span>•</span>
+                            <span>평균비용 <span class="orange">98,000원</span></span>
+                        </div>
+                    </div>
+
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide local_box">
+                            <a href="#">
+                                <div class="text">
+                                    <h3>플라잉팬</h3>
+                                    <h2>30,000원</h2>
+                                </div>
+                                <div class="img">
+                                    <img src="../image/local-sub03_img01.png" alt="">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide local_box">
+                            <a href="#">
+                                <div class="text">
+                                    <h3>미나리삼겹살</h3>
+                                    <h2>30,000원</h2>
+                                </div>
+                                <div class="">
+                                    <img src="../image/local-sub03_img02.png" alt="">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide local_box">
+                            <a href="#">
+                                <div class="text">
+                                    <h3>온유네닭매운탕</h3>
+                                    <h2>30,000원</h2>
+                                </div>
+                                <div class="img">
+                                    <img src="../image/local-sub03_img03.png" alt="">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide local_box">
+                            <a href="#">
+                                <div class="text">
+                                    <h3>미나리삼겹살</h3>
+                                    <h2>30,000원</h2>
+                                </div>
+                                <div class="img">
+                                    <img src="../image/local-sub03_img02.png" alt="">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- sub04 -->
+                <div class="swiper sub_sec06 brandArea mb40">
+                    <div class="title_flex">
+                        <h1>만약의 경우라면 해야할 일 목록</h1>
+                        <div class="like">21</i></div>
+                    </div>
+
+                    <div class="box_style box_style3 mb20">
+                        <h2>온유네닭매운탕, 젬스톤, 성심당 외 3곳</h2>
+                        <div class="flex mt10">
+                            <span>총 여행비용 <span class="pink">111,840원</span></span>
+                            <span>•</span>
+                            <span>평균비용 <span class="orange">98,000원</span></span>
+                        </div>
+                    </div>
+
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide local_box">
+                            <a href="#">
+                                <div class="text">
+                                    <h3>플라잉팬</h3>
+                                    <h2>30,000원</h2>
+                                </div>
+                                <div class="img">
+                                    <img src="../image/local-sub03_img01.png" alt="">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide local_box">
+                            <a href="#">
+                                <div class="text">
+                                    <h3>미나리삼겹살</h3>
+                                    <h2>30,000원</h2>
+                                </div>
+                                <div class="">
+                                    <img src="../image/local-sub03_img02.png" alt="">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide local_box">
+                            <a href="#">
+                                <div class="text">
+                                    <h3>온유네닭매운탕</h3>
+                                    <h2>30,000원</h2>
+                                </div>
+                                <div class="img">
+                                    <img src="../image/local-sub03_img03.png" alt="">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide local_box">
+                            <a href="#">
+                                <div class="text">
+                                    <h3>미나리삼겹살</h3>
+                                    <h2>30,000원</h2>
+                                </div>
+                                <div class="img">
+                                    <img src="../image/local-sub03_img02.png" alt="">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <!-- 하단 여유 -->
+                <div class="pb80"></div>
+            </section>
+
+            <!-- menu -->
+            <nav id="nav_menu">
+                <ul class="menu">
+                    <li class="menu_items">
+                        <a href="dashboard.html" title="home" class="on">
+                            <img src="../image/menu_icon01.svg" alt="" />
+                            <p>홈</p>
+                        </a>
+                    </li>
+                    <li class="menu_items">
+                        <a href="sub01.html" title="make" target="">
+                            <img src="../image/menu_icon02.svg" alt="" />
+                            <p>만들기</p>
+                        </a>
+                    </li>
+                    <li class="menu_items">
+                        <a href="#" title="map" target="">
+                            <img src="../image/menu_icon03.svg" alt="" />
+                            <p>지도</p>
+                        </a>
+                    </li>
+                    <li class="menu_items">
+                        <a href="#" title="save" target="">
+                            <img src="../image/menu_icon04.svg" alt="" />
+                            <p>저장</p>
+                        </a>
+                    </li>
+                    <li class="menu_items">
+                        <a href="#" title="mypage" target="">
+                            <img src="../image/menu_icon05.svg" alt="" />
+                            <p>마이페이지</p>
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <footer>
+        <div class="footer_inner width1200">
+            <p class="footer_copyright text_center">Copyright ⓒ2024 제이어스.All right reserved.</p>
+        </div>
+    </footer>
+
+
+
+</body>
+<script src="../script/common.js"></script>
+<script src="../script/min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+
+</html>

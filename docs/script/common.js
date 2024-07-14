@@ -65,16 +65,28 @@ $(function () {
 
 
 // local_keywords + travelWrap
-$('.pop_1').click(function() {
-  if ( $('.popup-2').hasClass('active') ) {
-    $('.popup-2').removeClass('active');
-  }
-  else {
-    $('.popup-2').addClass('active');
-  }
+$(document).ready(function () {
+  $('.pop_1').click(function () {
+      if ($('.popup-2').hasClass('active')) {
+          $('.popup-2').removeClass('active');
+          $('#contents').removeClass('no-scroll');
+      } else {
+          $('.popup-2').addClass('active');
+          $('#contents').addClass('no-scroll');
+      }
+  });
+
+  $(document).click(function (event) {
+      // 이벤트 발생한 요소가 팝업이나 팝업 열기 버튼이 아닌 경우 팝업을 닫기
+      if (!$(event.target).closest('.popup-2, .pop_1').length) {
+          $('.popup-2').removeClass('active');
+          $('#contents').removeClass('no-scroll');
+      }
+  });
 });
 
-// localswipers
+
+// local_swiper
 let swiper05 = new Swiper(".brandArea", {
   slidesPerView: 1.5,
   spaceBetween: 20,
@@ -94,41 +106,54 @@ let swiper05 = new Swiper(".brandArea", {
   },
 });
 
-// brandwrap_more
-// $(function () {
-//   $(".more").click(function (e) {
-//     e.stopPropagation();
-//     $(".more_link").fadeToggle(); // Use fadeToggle() instead of fadeIn()
+
+// More_click 
+// function More_click () {
+// $(document).ready(function () {
+//   $('.more').click(function (event) {
+//       event.stopPropagation();
+//       $('.more_link').toggleClass('active');
 //   });
 
-//   $(".more_link, .linkbox").click(function (e) {
-//     e.stopPropagation();
-//   });
-
-//   $(".links").click(function (e) {
-//     e.preventDefault();
-//     e.stopPropagation();
-//     $(this).find("*").addClass("read");
-//   });
-
-//   $(document).click(function () {
-//     $(".more_link").fadeOut(); 
+//   $(document).click(function (event) {
+//       if (!$(event.target).closest('.more, .more_link').length) {
+//           $('.more_link').removeClass('active');
+//       }
 //   });
 // });
-// //brandwrap_more on
-// $(function () {
-//   $(".brandArea .img .more ").click(function () {
-//     $(".brandArea .img .more .more_link").removeClass("active");
-//     $(this).addClass("active");
-//   });
-// });
+// }
+// More_click ();
 
-// local heart
-// $(" .more ").click(function () {
-//   if ($(".more .more_link ").hasClass("active")) {
-//     $(" .more .more_link ").removeClass("active");
-//   }
-//   else {
-//     $(" .more .more_link").addClass("active");
-//   }
-// });
+// function Copy_URL() {
+//   // 복사문구값 가져오기
+//   let copyTxt = document.getElementById(".copy-value");
+
+//   // 복사문구 선택
+//   copyTxt.select();
+//   copyTxt.setSelectionRange(0, 99999); // Mobile 대응
+
+//    // 복사
+//   navigator.clipboard.writeText(copyTxt.value);
+
+//   // 복사완료에 대해 Alert으로 띄우기
+//   alert("복사되었습니다.");
+// }
+
+// Copy_URL();
+function copyText() {
+  // Get the input element
+  var copyText = document.getElementById("copy-value");
+
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+  // Copy the text inside the text field
+  document.execCommand("copy");
+
+  // Alert copied with a slight delay
+  setTimeout(function () {
+      alert("URL이 복사되었습니다.");
+  }, 100);
+}
+copyText();

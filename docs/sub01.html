@@ -17,8 +17,35 @@
 </head>
 
 <body>
-    <div id="hipple_wrap">
+    <div id="hipple_wrap" class="hipple_sub">
         <div class="hipple_main" style="background: var(--white);">
+
+            <!-- URL share -->
+            <div class="travelWrap popup-2" id="popup"> 
+                <article class="pop-wrap">
+                    <div class="travel_box" >
+                        <h1>공유하기</h1>
+                        <div class="share_box">
+                            <div class="sns_share flex mb20">
+                                <a class="shareflex" href="#">
+                                    <img src="../image/kakao.svg" alt="">
+                                    <p>카카오톡</p>
+                                </a>
+                                <a class="shareflex" href="#">
+                                    <img src="../image/fackbook.svg" alt="">
+                                    <p>페이스북</p>
+                                </a>
+                            </div>
+                            <div class="url_copy all_view flex mb20">
+                                <input type="text" class="copy-value" id="copy-value" name="urlInput" value="http://ai.jjus.co.kr/df/sdkjfsld">
+                                <button onclick="copyText()" class="f_s_16">URL복사</button>
+                            </div>
+                        </div>
+                        <div class="line"></div>
+                    </div>
+                </article>
+            </div>
+
             <!-- header-logo -->
             <header class="top_logo top_logo2">
                 <div class="mobile_style">
@@ -30,7 +57,7 @@
                     </div>
 
                     <div class="visual mt20">
-                        <a href="#"><img src="./image/sub01_top-img01.png" alt=""></a>
+                        <a href="dashboard.html"><img src="./image/sub01_top-img01.png" alt=""></a>
                         <h1>상세보기</h1>
                         <div class="box">
                             <form name="search">
@@ -43,10 +70,7 @@
                 </div>
             </header>
             <!-- sub01_top -->
-            <section class="sub_top">
-
-
-            </section>
+            <section class="sub_top"></section>
 
             <!-- main-->
             <section class="main" id="contents" style="background: var(--white);">
@@ -149,7 +173,7 @@
 
                         <div class="morebox">
                             <a href="#">전체보기 <i class="fa-solid fa-chevron-right i_style"></i></a>
-                            <div class="more">
+                            <div class="gpt_ex">
                                 <span><img src="./image/sub01-3_img02.svg" alt=""></span>
                                 <span>현재 ChatGPT 기술에서는 부분적으로 표시 되지 않는 표현이 가능합니다.</span>
                             </div>
@@ -165,7 +189,7 @@
                             <div class="img"><img src="./image/sub01-3_img04.svg" alt=""></div> <span>언급량</span> <b
                                 class="pink">434</b>
                         </div>
-                        <div class="icon">
+                        <div class="icon pop_1">
                             <div class="img"><img src="./image/sub01-3_img05.svg" alt=""></div> <span>공유</span> <b
                                 class="pink">102</b>
                         </div>
@@ -217,7 +241,7 @@
                                 <div>힙플 BEST</div>
                                 <div style="border-color: var(--orange); color: var(--orange);">성심당혜택</div>
                                 <div
-                                    style="border-color: inherit; color: var(--white); background:var(--text-color);">
+                                    style="border-color: inherit; color: var(--white); background:var(--text_black);">
                                     영업중</div>
                             </div>
                         </div>
@@ -232,7 +256,7 @@
                                 <div>힙플 BEST</div>
                                 <div style="border-color: var(--orange); color: var(--orange);">성심당혜택</div>
                                 <div
-                                    style="border-color: inherit; color: var(--white); background:var(--text-color);">
+                                    style="border-color: inherit; color: var(--white); background:var(--text_black);">
                                     영업중</div>
                             </div>
                         </div>
@@ -247,7 +271,7 @@
                                 <div>힙플 BEST</div>
                                 <div style="border-color: var(--orange); color: var(--orange);">성심당혜택</div>
                                 <div
-                                    style="border-color: inherit; color: var(--white); background:var(--text-color);">
+                                    style="border-color: inherit; color: var(--white); background:var(--text_black);">
                                     영업중</div>
                             </div>
                         </div>
@@ -262,7 +286,7 @@
                                 <div>힙플 BEST</div>
                                 <div style="border-color: var(--orange); color: var(--orange);">성심당혜택</div>
                                 <div
-                                    style="border-color: inherit; color: var(--white); background:var(--text-color);">
+                                    style="border-color: inherit; color: var(--white); background:var(--text_black);">
                                     영업중</div>
                             </div>
                         </div>
@@ -406,5 +430,4 @@
         },
     });
 </script>
-
 </html>

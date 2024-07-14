@@ -90,7 +90,7 @@
                     </div>
 
                     <div class="local_title flex mt20">
-                        <a href="dashboard.html">
+                        <a href="../dashboard.html">
                             <img src="../image/left_arrow.png" alt="">
                             <h1 class="bold">내가 만든 지도 😘</h1>
                         </a>
@@ -141,7 +141,7 @@
                 </div>
 
                 <!-- sub03 -->
-                <div class="swiper sub_sec06 brandArea mb40">
+                <div class="swiper sub_sec06 mb40">
                     <!-- <h1>로컬 브랜드 정보✨</h1> -->
                     <div class="swiper-wrapper">
                         <div class="swiper-slide local_box">
@@ -193,7 +193,7 @@
                 </div>
 
                 <!-- sub04 -->
-                <div class="swiper sub_sec06 brandArea mb40">
+                <div class="swiper sub_sec06 mb40">
                     <div class="title_flex">
                         <h1>만약의 경우라면 해야할 일 목록</h1>
                         <div class="like">21</i></div>
@@ -331,13 +331,13 @@
             <nav id="nav_menu">
                 <ul class="menu">
                     <li class="menu_items">
-                        <a href="dashboard.html" title="home" class="on">
+                        <a href="../dashboard.html" title="home" class="on">
                             <img src="../image/menu_icon01.svg" alt="" />
                             <p>홈</p>
                         </a>
                     </li>
                     <li class="menu_items">
-                        <a href="sub01.html" title="make" target="">
+                        <a href="../sub01.html" title="make" target="">
                             <img src="../image/menu_icon02.svg" alt="" />
                             <p>만들기</p>
                         </a>
@@ -377,5 +377,28 @@
 <script src="../script/common.js"></script>
 <script src="../script/min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    // var localkeyword = new Swiper(".localwrap", {});
 
+    let swiper01 = new Swiper(".sub_sec06", {
+        slidesPerView: 1.5,
+        spaceBetween: 20,
+        loop: true,
+        loopAdditionalSlides: 1,
+        autoplay: { delay: 0, disableOnInteraction: false },
+        speed: 4000,
+        breakpoints: {
+            1000: {
+                slidesPerView: 3.5,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 2.5,
+                spaceBetween: 20,
+            },
+        },
+    });
+
+    
+</script>
 </html>

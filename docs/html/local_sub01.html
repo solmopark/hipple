@@ -30,7 +30,7 @@
                     </div>
 
                     <div class="visual mt20">
-                        <a href="#"><img src="../image/sub01_top-img01.png" alt=""></a>
+                        <a href="local_brand.html"><img src="../image/sub01_top-img01.png" alt=""></a>
                         <h1>동네노포</h1>
                         <div class="box">
                             <form name="search">
@@ -58,9 +58,9 @@
                         <div class="rel flex">
                             <div class="like">21</i></div>
                             <div class="more"></div>
-                            <ul class="more_link">
-                                <li>주소복사</li>
-                                <li class="mt5">네이버주소</li>
+                            <ul class="more_link" id="more">
+                                <li class="cs_p">주소복사</li>
+                                <li class="mt5 cs_p">네이버주소</li>
                             </ul>
                         </div>
                     </div>
@@ -68,7 +68,7 @@
                         <div>힙플 BEST</div>
                         <div style="border-color: var(--orange); color: var(--orange);">성심당혜택</div>
                         <div
-                            style="border-color: inherit; color: var(--white); background:var(--text-color);">
+                            style="border-color: inherit; color: var(--white); background:var(--text_black);">
                             영업중</div>
                     </div>
                 </div>
@@ -123,9 +123,6 @@
                     </div>
                 </div>
 
-                <!-- sub_sec03 -->
-
-
                 <!-- button -->
                 <div class="all_view mb40">
                     <button><a href="#">네이버 바로가기</a></button>
@@ -139,13 +136,13 @@
             <nav id="nav_menu">
                 <ul class="menu">
                     <li class="menu_items">
-                        <a href="dashboard.html" title="home" class="on">
+                        <a href="../dashboard.html" title="home" class="on">
                             <img src="../image/menu_icon01.svg" alt="" />
                             <p>홈</p>
                         </a>
                     </li>
                     <li class="menu_items">
-                        <a href="sub01.html" title="make">
+                        <a href="../sub01.html" title="make">
                             <img src="../image/menu_icon02.svg" alt="" />
                             <p>만들기</p>
                         </a>
@@ -184,4 +181,25 @@
 </body>
 <script src="../script/common.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
 
+    // More_click 
+    function More_click() {
+        $(document).ready(function () {
+            $('.more').click(function (event) {
+                event.stopPropagation();
+                var $moreLink = $(this).siblings('.more_link');
+                $('.more_link').not($moreLink).removeClass('active'); // 다른 모든 .more_link 요소의 active 클래스 제거
+                $moreLink.toggleClass('active'); // 클릭된 .more 요소의 형제 .more_link에 active 클래스 토글
+            });
+
+            $(document).click(function (event) {
+                if (!$(event.target).closest('.more, .more_link').length) {
+                    $('.more_link').removeClass('active');
+                }
+            });
+        });
+    }
+    More_click();
+</script>
+</html>

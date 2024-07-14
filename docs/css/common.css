@@ -2,7 +2,7 @@
 
 /* color */
 :root {
-  --text-color: #1A1A1A;
+  --text_black: #1A1A1A;
   --text_gray:#909090;
   --main_pink: #EB083C;
   --sub_pink:#FA3C4C;
@@ -13,7 +13,7 @@
   --bg_black:#333333;
   --white:#ffffff;
 
-  --border_gray:#E8E8E8;
+  --line_gray:#e8e8e8;
 
   --filter_main:invert(14%) sepia(90%) saturate(6760%) hue-rotate(342deg) brightness(93%) contrast(98%);
   --filter_sub:invert(47%) sepia(100%) saturate(4080%) hue-rotate(332deg) brightness(106%) contrast(118%);
@@ -24,10 +24,13 @@
   --shadow_top:0px -6px 9px rgb(122 122 122 / 10%)
 }
 
-body{background: var(--opacity_main);}
+body{background: var(--opacity_main); font-size: 1.4rem;}
+
 
 /* -- 공용 css -- */
 .width1200{width:1200px; margin:0 auto;}
+
+.no-scroll {overflow: hidden;}
 
 /* margin */
 .ml5 {margin-left:0.5rem;}
@@ -50,15 +53,19 @@ body{background: var(--opacity_main);}
 .pb40 {padding-bottom:4rem;}
 .pb80 {padding-bottom:8rem;}
 
-/* text-align */
-.text_center{text-align: center;}
-
+/* text */
 .bold{font-weight:bold;}
 .normal{font-weight:normal !important;}
-.i_style{font-size: 1.1rem !important;}
+.m_bold{font-weight: 400;}
+.l_bold{font-weight: 700;}
+
+.text_center{text-align: center;}
 
 .titleArea {font-size:1.8rem; font-weight: bold; color:var(--main_pink);}
 
+.i_style{font-size: 1.1rem !important;}
+
+.f_s_16 {font-size: 1.6rem;}
 /* br */
 .show_375 {display: none;}
 
@@ -68,7 +75,7 @@ body{background: var(--opacity_main);}
 .gray {color:var(--text_gray); font-weight:400;}
 .orange {color:var(--orange)!important;;}
 .white {color:var(--white) !important;}
-.black{color:var(--text-color);}
+.black{color:var(--text_black);}
 
 /* flex */
 .flex {display:flex; justify-content: space-between;}
@@ -79,8 +86,12 @@ body{background: var(--opacity_main);}
 
 /* border */
 .line_none {border:0 !important; padding: inherit !important;}
+
+.cs_p {cursor:pointer;}
+
+
 /* main */
-body > section {background:#f5f5f5; margin: 0 auto; color:var(--text-color);}
+body > section {background:#f5f5f5; margin: 0 auto; color:var(--text_black);}
 /* -- 공용 css_End -- */
 
 /* -- hipple_wrap_Start -- */
@@ -103,7 +114,7 @@ body > section {background:#f5f5f5; margin: 0 auto; color:var(--text-color);}
 
 .mobile_style {display: flex; flex-flow: column; width: -webkit-fill-available;}
 .mobile_style .mobile_box{display: flex; justify-content: space-between; width: -webkit-fill-available;}
-.mobile_style .mobile_box .clock {font-size: 1.3rem; font-weight: bold; width:auto; color: var(--text-color); z-index: 101;}
+.mobile_style .mobile_box .clock {font-size: 1.3rem; font-weight: bold; width:auto; color: var(--text_black); z-index: 101;}
 .top_style2 .logo {cursor: pointer;}
 
 
@@ -125,7 +136,7 @@ body > section {background:#f5f5f5; margin: 0 auto; color:var(--text-color);}
 .searchBox input:focus {border-color:var(--main_pink); outline: none;}
 
 /* sec01 */
-#contents h1{font-size: 1.8rem; font-weight: 700; color:var(--text-color); margin-bottom:2rem;}
+#contents h1{font-size: 1.8rem; font-weight: 700; color:var(--text_black); margin-bottom:2rem;}
 
 .sec01 .text_box {background:var(--white); padding:1rem; line-height: 1.3; display: flex; height: 86px; flex-flow: column; justify-content: space-between; border-radius: 0 0 2.5rem 2.5rem;}
 .sec01 .text_box h3 {font-size: 1.3rem; font-weight: 700; word-break: break-all;}
@@ -266,6 +277,9 @@ footer {
   #hipple_wrap {height: calc(100vh - 9rem);}
   #nav_menu {margin: 0 auto 9rem;}
 
+  /* sub_share */
+  .hipple_sub .popup-2 {position:fixed; height:calc(100vh - 9rem);}
+
   /* travel */
   .travel_box {bottom: 9rem;}
 }
@@ -284,6 +298,8 @@ footer {
   /* travel */
   .travel_box {bottom: 7rem;}
   
+  /* sub_share */
+  .hipple_sub .popup-2 {position:fixed; height:calc(100vh - 7rem);}
 }
 
 /* @media only screen and (max-width: 600px){
@@ -328,7 +344,9 @@ footer {
   /* searchBox */
   .searchBox input {padding:1.2rem 2rem; }
   .searchBox img {top:20%;}
-
+  /* sub_share */
+  .hipple_sub .popup-2 {position:fixed; height:calc(100vh - 6.8rem);}
+  
   /* sec01 */
   #contents h1 {font-size: 1.5rem;}
   .sec01 .text_box h3 {font-size: 1.2rem;}

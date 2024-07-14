@@ -107,38 +107,6 @@ let swiper05 = new Swiper(".brandArea", {
 });
 
 
-// More_click 
-// function More_click () {
-// $(document).ready(function () {
-//   $('.more').click(function (event) {
-//       event.stopPropagation();
-//       $('.more_link').toggleClass('active');
-//   });
-
-//   $(document).click(function (event) {
-//       if (!$(event.target).closest('.more, .more_link').length) {
-//           $('.more_link').removeClass('active');
-//       }
-//   });
-// });
-// }
-// More_click ();
-
-// function Copy_URL() {
-//   // 복사문구값 가져오기
-//   let copyTxt = document.getElementById(".copy-value");
-
-//   // 복사문구 선택
-//   copyTxt.select();
-//   copyTxt.setSelectionRange(0, 99999); // Mobile 대응
-
-//    // 복사
-//   navigator.clipboard.writeText(copyTxt.value);
-
-//   // 복사완료에 대해 Alert으로 띄우기
-//   alert("복사되었습니다.");
-// }
-
 // Copy_URL();
 function copyText() {
   // Get the input element

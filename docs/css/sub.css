@@ -189,11 +189,8 @@ div.more::before {position:absolute; content: ''; background: url(../image/more_
 /* share_box */
 .share_box .sns_share {align-items: center; justify-content: space-evenly;}
 .share_box .sns_share p {font-size: 1.3rem; margin-top:0.8rem; text-align: center;}
-
 .share_box .url_copy input[type="text"]{padding:1.6rem 2.5rem; color:var(--text_gray); border:1px solid var(--line_gray); border-radius: 5px; font-size:1.4rem; background:var(--bg_gray2); width:68%; margin-right:0.8rem;}
 .share_box .all_view button {padding:1.6rem 2rem; width:auto; }
-
-
 /* ---- local-sub01_End ---- */
 
 
@@ -207,11 +204,12 @@ div.more::before {position:absolute; content: ''; background: url(../image/more_
     .titleArea {font-size:1.4rem;}
 
     .btn_box .introButton button{ font-size: 1.4rem; padding: 1.3rem;}
-
+    /* intro */
     .introArea h1.title {font-size: 2.4rem !important;}
     .introArea .introbox {margin:7rem 0;}
     .introArea .introbox .text p {font-size: 1.6rem;}
 
+    /* loading */
     .loadingArea h1 {font-size: 2rem !important;}
     .loadingArea p {font-size: 1.4rem;}
     .loading_sw .loading .swiper-slide-active.load::after {top: 3%; padding: 11.5rem;}
@@ -257,6 +255,7 @@ div.more::before {position:absolute; content: ''; background: url(../image/more_
     .share_box .all_view button {font-size: 1.4rem; padding:1.3rem 1.6rem; width: -webkit-fill-available;}
 }
 @media only screen and (max-width: 320px){
+    /* loading */
     .loading_sw .loading .swiper-slide-active.load::after {top: 3%; left: 4%; padding: 10rem;}
     .loading_sw .loading .swiper-slide-active .img::after {bottom:20%; right:25%; }
     .loading_sw .loading .swiper-slide-active .img::before {bottom:20%; left:22%;}
